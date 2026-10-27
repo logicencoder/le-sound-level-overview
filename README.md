@@ -35,3 +35,5 @@ This public repository contains product information and preview images only. App
 ## Latest controller patch
 
 Version 5.3.1 cleans up the File menu and expires stale meter telemetry without suppressing genuine quiet audio. The existing preview above shows the 5.3 dashboard layout.
+
+Version 5.3.2 adds **Settings > Inputs > Listen to USB input**, with the current Windows state and changes applied on Save. It controls listening through playback without disabling the input device or changing recording/mute/volume settings. [USB input Settings preview](images/usb-input-settings-preview.png) uses an isolated fixture.
