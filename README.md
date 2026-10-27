@@ -37,3 +37,11 @@ This public repository contains product information and preview images only. App
 Version 5.3.1 cleans up the File menu and expires stale meter telemetry without suppressing genuine quiet audio. The existing preview above shows the 5.3 dashboard layout.
 
 Version 5.3.2 adds **Settings > Inputs > Listen to USB input**, with the current Windows state and changes applied on Save. It controls listening through playback without disabling the input device or changing recording/mute/volume settings. [USB input Settings preview](images/usb-input-settings-preview.png) uses an isolated fixture.
+
+## Version 5.4
+
+- Settings > Inputs lists every Windows recording endpoint, including microphones, line-in, stereo mix and virtual inputs. Active inputs have independent live LED/dBFS meters; unavailable inputs retain their status. Paging prevents clipped controls. Refresh inputs rescans devices. Listen changes apply only on Save, without disabling recording or changing mute/default routes.
+- Balance attenuates the opposite side while processing is ON: 50% means -6.02 dB, the edge silences that side, and center restores unity. Mono/center/LFE are preserved.
+- Logs separate App events, Native component and Crashes, with UTC timestamps to milliseconds on every new line and repeated timestamps on wrapped display lines. No audio is recorded in logs.
+
+[All-input Settings preview](images/all-inputs-settings-preview.png) uses synthetic fixture devices, not the user's Windows device list. Host verification found all 27 recording endpoints and fresh meter data for the three active inputs; multichannel balance was verified with numerical tests. This is not a universal hardware/stream-mode guarantee.
