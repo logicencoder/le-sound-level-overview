@@ -2,7 +2,7 @@
 
 ![Development dashboard preview, synthetic signal](images/dashboard-preview.png)
 
-The featured image is a version 5.4.5 development preview with synthetic meter and spectrum signals, not a live playback measurement.
+The featured image is a version 5.4.6 development preview with synthetic meter and spectrum signals, not a live playback measurement.
 
 A quiet dialogue scene followed by a loud effect can make a comfortable movie volume difficult to maintain. Le Sound Normalizer brings a configurable digital output ceiling, compression presets and tone controls into a Windows audio workspace.
 
@@ -73,3 +73,5 @@ Version 5.4.3 adopts the name **Le Sound Normalizer** across the application, in
 Version 5.4.4 refreshes the output badge from Windows device notifications, adds endpoint-ancestry Bluetooth evidence when topology is unavailable, and records readable route changes. Notification registration and reacquisition were checked with live HDMI reads plus injected signals; physical Bluetooth hotplug is awaiting user testing. To follow Bluetooth automatically, choose Windows default in the app and route Windows playback to the Bluetooth device.
 
 Version 5.4.5 uses the exact name **Le Sound Normalizer** and meter labels **Input / Normalized**, with saved settings and audio behavior preserved. Bluetooth output detection concerns Windows-connected endpoints; headphones connected to a TV are downstream of HDMI and are not identified through Windows audio metadata.
+
+Version 5.4.6 labels the controls **Compression sensitivity** and **Output level**. Spectrum frequency-component levels and LED full-signal peaks are different measurements and need not have equal values. Calibration passed synthetic tests and a read-only live comparison against an independent direct DFT on captured Windows audio. The axis now explicitly labels -90 to +24 dBFS.
