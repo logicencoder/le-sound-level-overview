@@ -2,7 +2,7 @@
 
 ![Development dashboard with synthetic signals](images/dashboard-preview.png)
 
-This version 5.4.12 preview uses synthetic signals, not a live playback measurement.
+This version 5.4.14 preview uses synthetic signals, not a live playback measurement.
 
 Normalizes loud scenes for more comfortable listening. Set an output ceiling, then adjust compression sensitivity to reduce the difference between quiet dialogue and loud effects.
 
@@ -22,10 +22,12 @@ Native processing supports mono, stereo, 5.1 and 7.1 PCM. The player must decode
 
 ## Availability and verification
 
-This is a development build with automated DSP/controller/package checks and limited host verification, not certification across all Windows systems or playback modes. The clean distribution contains the controller, bundled setup, runtime libraries and license, without development material. A new PC needs setup once to register the system audio component. No public binary download is published in this repository.
+This is a development build with automated DSP/controller/package checks and limited host verification, not certification across all Windows systems or playback modes. The clean shareable distribution is one setup EXE with the controller, audio component, runtime libraries and license embedded inside. No adjacent DLLs, icons or development files are needed. A new PC needs setup once to register the system audio component. No public binary download is published in this repository.
 
 The controller is built with C# and Windows Forms; its audio component is C++. Technical source and detailed versioned verification are maintained in the private repository.
 
 [Private source](https://github.com/logicencoder/le-sound-normalizer) · [Logic Encoder](https://logicencoder.com)
 
 Version 5.4.13 fixes meter connection status while muted: connected outputs retain MUTED even when audio blocks stop arriving, while readings clear to the floor.
+
+Version 5.4.14 improves action contrast, enlarges Normalize, unifies application/installer/window icons and delivers the shareable package as a single setup EXE. Existing audio settings are preserved.
