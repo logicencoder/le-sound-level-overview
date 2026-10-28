@@ -65,3 +65,5 @@ Version-specific tests and private engineering material provide the appropriate 
 Private code: [le-sound-level](https://github.com/logicencoder/le-sound-level)
 
 **[Logic Encoder](https://logicencoder.com)** · [GitHub](https://github.com/logicencoder) · [Contact](https://logicencoder.com/contact/)
+
+Version 5.4.2 reduces About to one sentence and adds a selected-output icon beside the version: green speaker for non-Bluetooth output, blue Bluetooth for Bluetooth, neutral when unavailable. Connecting a device alone does not change the icon unless the output route follows it. The current HDMI route was verified live; Bluetooth transitions were checked with isolated fixtures, not physical pairing.
