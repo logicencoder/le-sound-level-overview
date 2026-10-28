@@ -1,10 +1,10 @@
-# Le Sound Level — Windows Audio Control
+# Sound Normalizer — Windows Audio Control
 
 ![Development dashboard preview, synthetic signal](images/dashboard-preview.png)
 
-The featured image is a version 5.3 development preview with synthetic meter and spectrum signals, not a live playback measurement.
+The featured image is a version 5.4.3 development preview with synthetic meter and spectrum signals, not a live playback measurement.
 
-A quiet dialogue scene followed by a loud effect can make a comfortable movie volume difficult to maintain. Le Sound Level brings a configurable digital output ceiling, compression presets and tone controls into a Windows audio workspace.
+A quiet dialogue scene followed by a loud effect can make a comfortable movie volume difficult to maintain. Sound Normalizer brings a configurable digital output ceiling, compression presets and tone controls into a Windows audio workspace.
 
 The interface lets the user inspect before-and-after levels, adjust the listening setup and review supported input devices. It controls digital sample levels; it is not a calibrated measurement or guarantee of physical sound pressure.
 
@@ -56,14 +56,16 @@ Version 5.4.1 simplifies the interface: purpose-focused About; Soft, Balanced an
 
 ## Current availability
 
-Le Sound Level is a development build, not a broadly certified public release. The repository presents the product and its preview material; no public binary download is currently published here.
+Sound Normalizer is a development build, not a broadly certified public release. The repository presents the product and its preview material; no public binary download is currently published here.
 
 Version-specific tests and private engineering material provide the appropriate detail for installation and compatibility work. A native processing lookahead value should not be read as a measurement of total playback latency.
 
 ---
 
-Private code: [le-sound-level](https://github.com/logicencoder/le-sound-level)
+Private code: [sound-normalizer](https://github.com/logicencoder/sound-normalizer)
 
 **[Logic Encoder](https://logicencoder.com)** · [GitHub](https://github.com/logicencoder) · [Contact](https://logicencoder.com/contact/)
 
 Version 5.4.2 reduces About to one sentence and adds a selected-output icon beside the version: green speaker for non-Bluetooth output, blue Bluetooth for Bluetooth, neutral when unavailable. Connecting a device alone does not change the icon unless the output route follows it. The current HDMI route was verified live; Bluetooth transitions were checked with isolated fixtures, not physical pairing.
+
+Version 5.4.3 adopts the name **Sound Normalizer** across the application, installer and repositories. Existing settings and audio behavior are preserved. Older linked input screenshots are historical fixtures and may show the former name.
