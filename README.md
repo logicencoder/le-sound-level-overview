@@ -2,7 +2,7 @@
 
 ![Development dashboard preview, synthetic signal](images/dashboard-preview.png)
 
-The featured image is a version 5.4.9 development preview with synthetic meter and spectrum signals, not a live playback measurement.
+The featured image is a version 5.4.10 development preview with synthetic meter and spectrum signals, not a live playback measurement.
 
 A quiet dialogue scene followed by a loud effect can make a comfortable movie volume difficult to maintain. Le Sound Normalizer brings a configurable digital output ceiling, compression presets and tone controls into a Windows audio workspace.
 
@@ -81,3 +81,5 @@ Version 5.4.7 gives all sliders a dark-to-bright green selected range, including
 Version 5.4.8 adds **-75 and -45 dBFS** scale labels to both LED meters, preserving their measurement and response behavior.
 
 Version 5.4.9 colors **both sides of L/R balance green**, brighter near the thumb and darker toward either edge, with unchanged balance/audio behavior.
+
+Version 5.4.10 names the main toggle **Normalize**. Its existing switch/color continue to show whether normalization is enabled.
