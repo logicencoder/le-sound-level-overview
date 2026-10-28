@@ -1,47 +1,65 @@
-# Le Sound Level
-
-Windows audio level control by [Logic Encoder](https://logicencoder.com).
-
-Le Sound Level is designed to reduce loud jumps in movies and other shared-mode Windows audio, with a configurable maximum sample level, compression and tone controls.
+# Le Sound Level — Windows Audio Control
 
 ![Development dashboard preview, synthetic signal](images/dashboard-preview.png)
 
-*Version 5.3 development preview with synthetic meter/spectrum signals. This image is not a live playback measurement.*
+The featured image is a version 5.3 development preview with synthetic meter and spectrum signals, not a live playback measurement.
 
-## Controls
+A quiet dialogue scene followed by a loud effect can make a comfortable movie volume difficult to maintain. Le Sound Level brings a configurable digital output ceiling, compression presets and tone controls into a Windows audio workspace.
 
-- Maximum output level in dBFS. More negative values set a quieter digital ceiling; this is not a calibrated physical loudness limit.
-- Gentle, Movie and Night compression presets, plus adjustable compression strength.
-- Bass, middle and treble EQ, each ±18 dB, and L/R balance.
-- Before/after LED meters, green digital readouts and a collapsible output spectrum.
-- Settings for audio engines, meter behavior, spectrum, appearance and window preferences; local diagnostics and a log viewer.
+The interface lets the user inspect before-and-after levels, adjust the listening setup and review supported input devices. It controls digital sample levels; it is not a calibrated measurement or guarantee of physical sound pressure.
 
-## Audio engines
+## Tech stack
 
-**System DSP** uses the application's own Windows audio component. Equalizer APO, Peace and a virtual cable are not requirements for this mode. Installing the bundled component requires Windows administrator approval.
+| Layer | Technologies |
+|---|---|
+| Controller | C#, Windows Forms, .NET Framework |
+| Native audio | C++, Windows audio processing |
+| Compatibility | WASAPI, optional VB-CABLE |
 
-**Compatibility** uses WASAPI and an existing VB-CABLE installation. It is optional and requires that separate cable component. **Automatic** can fall back to compatibility when its prerequisites are present.
+## Make sudden level changes easier to manage
 
-Native processing supports mono, stereo, 5.1 and 7.1 PCM. Movie codecs such as AC-3 must first be decoded by the player. Encoded HDMI/S/PDIF passthrough or audio modes that bypass Windows effects cannot be assumed to be limited. The selected endpoint must show active processor telemetry before relying on its limit.
+Choose a maximum output level in dBFS and use Gentle, Movie or Night compression as a starting point. Adjustable compression strength lets the user shape the response for the material being played.
 
-## Status
+The ceiling and compression serve related purposes but are different controls. Review the before-and-after readings while adjusting the setup instead of assuming that one preset fits every recording.
 
-This is a development build, not a broadly certified public release. Native DSP, installer transactions and controller behavior have isolated automated coverage; live compatibility and driver coverage remain scoped to tested configurations. A 1.5 ms native lookahead is not a measurement of total A/V or playback latency.
+## Shape the listening presentation
 
-This public repository contains product information and preview images only. Application source is maintained privately. No public binary download is published here yet.
+Bass, middle and treble controls support tone adjustments, while left/right balance helps adapt the stereo presentation. Before-and-after LED meters, digital readings and a collapsible spectrum make the effect easier to inspect.
 
-© Logic Encoder. Third-party names identify compatibility only.
+Appearance, meter and window preferences let the controller fit a brief adjustment or a longer listening session. The current settings remain close to the information used to review them.
 
-## Latest controller patch
+## Choose the supported audio path
 
-Version 5.3.1 cleans up the File menu and expires stale meter telemetry without suppressing genuine quiet audio. The existing preview above shows the 5.3 dashboard layout.
+System DSP uses the application's own Windows audio component and does not require Equalizer APO, Peace or a virtual cable. Installing that component requires Windows administrator approval.
 
-Version 5.3.2 adds **Settings > Inputs > Listen to USB input**, with the current Windows state and changes applied on Save. It controls listening through playback without disabling the input device or changing recording/mute/volume settings. [USB input Settings preview](images/usb-input-settings-preview.png) uses an isolated fixture.
+The optional Compatibility engine uses WASAPI with an existing VB-CABLE installation. Automatic selection can fall back to that route when its prerequisites are available.
 
-## Version 5.4
+## Understand where processing applies
 
-- Settings > Inputs lists every Windows recording endpoint, including microphones, line-in, stereo mix and virtual inputs. Active inputs have independent live LED/dBFS meters; unavailable inputs retain their status. Paging prevents clipped controls. Refresh inputs rescans devices. Listen changes apply only on Save, without disabling recording or changing mute/default routes.
-- Balance attenuates the opposite side while processing is ON: 50% means -6.02 dB, the edge silences that side, and center restores unity. Mono/center/LFE are preserved.
-- Logs separate App events, Native component and Crashes, with UTC timestamps to milliseconds on every new line and repeated timestamps on wrapped display lines. No audio is recorded in logs.
+Native processing supports mono, stereo, 5.1 and 7.1 PCM. Encoded movie audio must first be decoded by the player; HDMI or S/PDIF passthrough and modes that bypass Windows effects cannot be assumed to receive the limit.
 
-[All-input Settings preview](images/all-inputs-settings-preview.png) uses synthetic fixture devices, not the user's Windows device list. Host verification found all 27 recording endpoints and fresh meter data for the three active inputs; multichannel balance was verified with numerical tests. This is not a universal hardware/stream-mode guarantee.
+Check active processor telemetry for the selected output before relying on its setting. The product's scope depends on the actual playback path, not just the presence of a volume control on screen.
+
+## Inspect recording inputs without disabling them
+
+Version 5.4 lists Windows recording endpoints such as microphones, line-in, stereo mix and virtual inputs. Available inputs have independent live level meters, while unavailable devices retain their status. Paging and refresh support reviewing a larger device list.
+
+Listen-to-playback choices apply on Save. They do not disable recording devices or change recording mute, volume or default routes. The [all-input settings image](images/all-inputs-settings-preview.png) is an isolated synthetic fixture, not the user's device inventory.
+
+## Keep balance and diagnostics understandable
+
+Balance adjusts the opposite side while processing is enabled and preserves the intended mono, centre and LFE behaviour. Application, native-component and crash logs provide separate places to investigate an interruption; logs do not record audio.
+
+The [USB input settings preview](images/usb-input-settings-preview.png) also uses an isolated fixture. Controller and processing behaviour have automated coverage, while live compatibility remains limited to the configurations actually tested.
+
+## Current availability
+
+Le Sound Level is a development build, not a broadly certified public release. The repository presents the product and its preview material; no public binary download is currently published here.
+
+Version-specific tests and private engineering material provide the appropriate detail for installation and compatibility work. A native processing lookahead value should not be read as a measurement of total playback latency.
+
+---
+
+Private code: [le-sound-level](https://github.com/logicencoder/le-sound-level)
+
+**[Logic Encoder](https://logicencoder.com)** · [GitHub](https://github.com/logicencoder) · [Contact](https://logicencoder.com/contact/)
