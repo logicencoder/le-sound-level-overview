@@ -52,6 +52,8 @@ Balance adjusts the opposite side while processing is enabled and preserves the 
 
 The [USB input settings preview](images/usb-input-settings-preview.png) also uses an isolated fixture. Controller and processing behaviour have automated coverage, while live compatibility remains limited to the configurations actually tested.
 
+Version 5.4.1 simplifies the interface: purpose-focused About; Soft, Balanced and Strong compression presets; Original and Processed meters; fewer technical footnotes. Existing audio behavior and saved settings are preserved.
+
 ## Current availability
 
 Le Sound Level is a development build, not a broadly certified public release. The repository presents the product and its preview material; no public binary download is currently published here.
