@@ -1,87 +1,29 @@
-# Le Sound Normalizer — Windows Audio Control
+# Le Sound Normalizer
 
-![Development dashboard preview, synthetic signal](images/dashboard-preview.png)
+![Development dashboard with synthetic signals](images/dashboard-preview.png)
 
-The featured image is a version 5.4.11 development preview with synthetic meter and spectrum signals, not a live playback measurement.
+This version 5.4.12 preview uses synthetic signals, not a live playback measurement.
 
-A quiet dialogue scene followed by a loud effect can make a comfortable movie volume difficult to maintain. Le Sound Normalizer brings a configurable digital output ceiling, compression presets and tone controls into a Windows audio workspace.
+Normalizes loud scenes for more comfortable listening. Set an output ceiling, then adjust compression sensitivity to reduce the difference between quiet dialogue and loud effects.
 
-The interface lets the user inspect before-and-after levels, adjust the listening setup and review supported input devices. It controls digital sample levels; it is not a calibrated measurement or guarantee of physical sound pressure.
+- **Soft 23%**, **Balanced 42%**, **NMS 66%** compression starting points, plus an adjustable sensitivity slider.
+- **Output level** sets the digital peak ceiling. **Volume** controls everyday listening volume.
+- Bass, middle and treble controls, left/right balance, green digital meters and a collapsible frequency spectrum.
+- Save and load your own sound presets. Settings remember your preferences and window layout.
+- A speaker button mutes or unmutes the selected Windows output only when clicked.
+- Recording-input meters and explicit Enable/Disable listening actions, applied on Save.
+- Short Help, purpose-focused About and local application/native/crash diagnostics.
 
-## Tech stack
+## Audio paths
 
-| Layer | Technologies |
-|---|---|
-| Controller | C#, Windows Forms, .NET Framework |
-| Native audio | C++, Windows audio processing |
-| Compatibility | WASAPI, optional VB-CABLE |
+System DSP uses the application's own Windows audio component. It does not require Equalizer APO, Peace or a virtual cable. Setup requires administrator approval once; normal controller use does not. Compatibility is an optional alternative using WASAPI and an existing VB-CABLE installation.
 
-## Make sudden level changes easier to manage
+Native processing supports mono, stereo, 5.1 and 7.1 PCM. The player must decode compressed audio to PCM. Encoded HDMI/S/PDIF passthrough and paths bypassing Windows audio effects cannot be assumed to receive the ceiling. Digital dBFS readings are not physical sound-pressure measurements. Spectrum bars show individual frequency components; LED meters show the full-signal peak, so their values differ.
 
-Choose a maximum output level in dBFS and use Gentle, Movie or Night compression as a starting point. Adjustable compression strength lets the user shape the response for the material being played.
+## Availability and verification
 
-The ceiling and compression serve related purposes but are different controls. Review the before-and-after readings while adjusting the setup instead of assuming that one preset fits every recording.
+This is a development build with automated DSP/controller/package checks and limited host verification, not certification across all Windows systems or playback modes. The clean distribution contains the controller, bundled setup, runtime libraries and license, without development material. A new PC needs setup once to register the system audio component. No public binary download is published in this repository.
 
-## Shape the listening presentation
+The controller is built with C# and Windows Forms; its audio component is C++. Technical source and detailed versioned verification are maintained in the private repository.
 
-Bass, middle and treble controls support tone adjustments, while left/right balance helps adapt the stereo presentation. Before-and-after LED meters, digital readings and a collapsible spectrum make the effect easier to inspect.
-
-Appearance, meter and window preferences let the controller fit a brief adjustment or a longer listening session. The current settings remain close to the information used to review them.
-
-## Choose the supported audio path
-
-System DSP uses the application's own Windows audio component and does not require Equalizer APO, Peace or a virtual cable. Installing that component requires Windows administrator approval.
-
-The optional Compatibility engine uses WASAPI with an existing VB-CABLE installation. Automatic selection can fall back to that route when its prerequisites are available.
-
-## Understand where processing applies
-
-Native processing supports mono, stereo, 5.1 and 7.1 PCM. Encoded movie audio must first be decoded by the player; HDMI or S/PDIF passthrough and modes that bypass Windows effects cannot be assumed to receive the limit.
-
-Check active processor telemetry for the selected output before relying on its setting. The product's scope depends on the actual playback path, not just the presence of a volume control on screen.
-
-## Inspect recording inputs without disabling them
-
-Version 5.4 lists Windows recording endpoints such as microphones, line-in, stereo mix and virtual inputs. Available inputs have independent live level meters, while unavailable devices retain their status. Paging and refresh support reviewing a larger device list.
-
-Listen-to-playback choices apply on Save. They do not disable recording devices or change recording mute, volume or default routes. The [all-input settings image](images/all-inputs-settings-preview.png) is an isolated synthetic fixture, not the user's device inventory.
-
-## Keep balance and diagnostics understandable
-
-Balance adjusts the opposite side while processing is enabled and preserves the intended mono, centre and LFE behaviour. Application, native-component and crash logs provide separate places to investigate an interruption; logs do not record audio.
-
-The [USB input settings preview](images/usb-input-settings-preview.png) also uses an isolated fixture. Controller and processing behaviour have automated coverage, while live compatibility remains limited to the configurations actually tested.
-
-Version 5.4.1 simplifies the interface: purpose-focused About; Soft, Balanced and Strong compression presets; Original and Processed meters; fewer technical footnotes. Existing audio behavior and saved settings are preserved.
-
-## Current availability
-
-Le Sound Normalizer is a development build, not a broadly certified public release. The repository presents the product and its preview material; no public binary download is currently published here.
-
-Version-specific tests and private engineering material provide the appropriate detail for installation and compatibility work. A native processing lookahead value should not be read as a measurement of total playback latency.
-
----
-
-Private code: [le-sound-normalizer](https://github.com/logicencoder/le-sound-normalizer)
-
-**[Logic Encoder](https://logicencoder.com)** · [GitHub](https://github.com/logicencoder) · [Contact](https://logicencoder.com/contact/)
-
-Version 5.4.2 reduces About to one sentence and adds a selected-output icon beside the version: green speaker for non-Bluetooth output, blue Bluetooth for Bluetooth, neutral when unavailable. Connecting a device alone does not change the icon unless the output route follows it. The current HDMI route was verified live; Bluetooth transitions were checked with isolated fixtures, not physical pairing.
-
-Version 5.4.3 adopts the name **Le Sound Normalizer** across the application, installer and repositories. Existing settings and audio behavior are preserved. Older linked input screenshots are historical fixtures and may show the former name.
-
-Version 5.4.4 refreshes the output badge from Windows device notifications, adds endpoint-ancestry Bluetooth evidence when topology is unavailable, and records readable route changes. Notification registration and reacquisition were checked with live HDMI reads plus injected signals; physical Bluetooth hotplug is awaiting user testing. To follow Bluetooth automatically, choose Windows default in the app and route Windows playback to the Bluetooth device.
-
-Version 5.4.5 uses the exact name **Le Sound Normalizer** and meter labels **Input / Normalized**, with saved settings and audio behavior preserved. Bluetooth output detection concerns Windows-connected endpoints; headphones connected to a TV are downstream of HDMI and are not identified through Windows audio metadata.
-
-Version 5.4.6 labels the controls **Compression sensitivity** and **Output level**. Spectrum frequency-component levels and LED full-signal peaks are different measurements and need not have equal values. Calibration passed synthetic tests and a read-only live comparison against an independent direct DFT on captured Windows audio. The axis now explicitly labels -90 to +24 dBFS.
-
-Version 5.4.7 gives all sliders a dark-to-bright green selected range, including L/R balance and Settings controls. Bipolar center markers, saved values and audio behavior are preserved.
-
-Version 5.4.8 adds **-75 and -45 dBFS** scale labels to both LED meters, preserving their measurement and response behavior.
-
-Version 5.4.9 colors **both sides of L/R balance green**, brighter near the thumb and darker toward either edge, with unchanged balance/audio behavior.
-
-Version 5.4.10 names the main toggle **Normalize**. Its existing switch/color continue to show whether normalization is enabled.
-
-Version 5.4.11 adds the **-12 dBFS** label at the yellow/red transition under both LED meters, preserving color thresholds and audio behavior.
+[Private source](https://github.com/logicencoder/le-sound-normalizer) · [Logic Encoder](https://logicencoder.com)
