@@ -70,3 +70,9 @@ Settings > Audio includes Restart audio, with administrator confirmation only wh
 
 ![Green palette — synthetic preview](assets/palette-green.png)
 ![Cyan palette — synthetic preview](assets/palette-cyan.png)
+
+## New in 5.7.1
+
+The waveform cursor is removed and its intensity slider sits underneath, using the same palette-aware gradient as other controls. Volume marks 100% before its extra preamp range; EQ tracks are thicker. Output level and Compression sensitivity share aligned titles, middle values and lower sliders. Soft/Balanced/NMS are hidden by default and can be enabled in Settings > Application > Show compression presets. Saved panel order, audio values and display intensity are preserved.
+
+![Consolidated dashboard — synthetic preview](assets/dashboard-5.7.1.png)
