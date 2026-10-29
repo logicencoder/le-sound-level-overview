@@ -61,3 +61,12 @@ Adjust Wave intensity directly with the slider above the waveform: 30–3000%, w
 ## New in 5.6.2
 
 A small EQ ON/OFF switch in the EQ header bypasses only equalization. Normalization and its output limit remain active. Saved frequency values are retained and restored when EQ is enabled again; the switch state is also saved in preferences and sound presets. Both simple and fifteen-band EQ support it. Live installed verification confirmed OFF without disabling Normalize and ON restoring the original values.
+
+## New in 5.7.0
+
+Choose Green or Cyan in Settings > Application > Color palette. Controls, displays, spectrum, waveform and runtime icons follow the selection; System/Light/Dark remains independent. Green now includes a green waveform. Yellow/red warning levels retain their meaning.
+
+Settings > Audio includes Restart audio, with administrator confirmation only when clicked. The app itself continues to run normally. The action restarts Windows Audio only, refuses running dependent services and preserves mute/reduced-volume restrictions. Main-panel Refresh continues to rescan devices. The restart coordinator and cancellation paths were tested with injected services; an actual host service restart was not performed during this update.
+
+![Green palette — synthetic preview](assets/palette-green.png)
+![Cyan palette — synthetic preview](assets/palette-cyan.png)
