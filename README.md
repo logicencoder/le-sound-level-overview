@@ -100,3 +100,10 @@ Larger frequency labels and EQ gain values are the default. Settings > Text size
 Preamp gain is visible in diagnostics and above 100% in the status line. At 125%, the boost is approximately 1.94 dB before compression and the limiter; Output level remains the ceiling.
 
 ![Readable labels — synthetic preview](assets/readability-5.7.4.png)
+
+
+## New in 5.7.5
+
+The engine and live audio details now share one bottom row. The top DSP line is removed. Adjusting EQ keeps runtime text steady instead of briefly showing settings-sent messages; important errors remain visible and parameter details are still recorded in Logs.
+
+![Consolidated footer — isolated preview](assets/footer-5.7.5.png)
