@@ -82,3 +82,12 @@ The waveform cursor is removed and its intensity slider sits underneath, using t
 Compression percentage/ratio and Reduction share one compact row. EQ tracks are thicker by default; choose 4–16 px in Settings > Audio > EQ track thickness. The 100% Volume tick extends above and below the thumb at exactly 100%, making the extra preamp range easier to identify. Existing audio values and panel preferences are preserved.
 
 ![Compact tuning row — synthetic preview](assets/dashboard-5.7.2.png)
+
+## New in 5.7.3
+
+Output level and Compression sensitivity sit directly beneath the LED meters by default. Settings > Layout lets you reorder the meter row, tuning row, spectrum, oscilloscope and EQ; choose expanded sections, swap the tuning sides and show optional compression presets. Main-panel disclosure arrows remember their state without disabling processing. Both simple and 15-band EQ can collapse.
+
+The dashboard uses the available window width. Additional height goes to an expanded visual panel while disclosure preserves control and font scale. Volume above 100% is preamp gain before the final limiter: 125% adds approximately 1.94 dB to a quiet signal, while Output level remains the ceiling.
+
+![Responsive dashboard — synthetic preview](assets/dashboard-5.7.3.png)
+![Layout settings — isolated fixture](assets/layout-5.7.3.png)
