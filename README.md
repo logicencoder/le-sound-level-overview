@@ -57,3 +57,7 @@ The exact native module passed 417 isolated APO scenarios and was confirmed load
 ## New in 5.6.1
 
 Adjust Wave intensity directly with the slider above the waveform: 30–3000%, without changing audio volume. Its percentage is visible and saved automatically. Double-click the track or press Home to return to 100%. The same value is available in Settings > Spectrum. This was verified on the installed application during real playback, including the larger live waveform and persisted intensity; the native audio module is unchanged.
+
+## New in 5.6.2
+
+A small EQ ON/OFF switch in the EQ header bypasses only equalization. Normalization and its output limit remain active. Saved frequency values are retained and restored when EQ is enabled again; the switch state is also saved in preferences and sound presets. Both simple and fifteen-band EQ support it. Live installed verification confirmed OFF without disabling Normalize and ON restoring the original values.
