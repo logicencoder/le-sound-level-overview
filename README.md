@@ -2,7 +2,7 @@
 
 ![Development dashboard with synthetic signals](images/dashboard-preview.png)
 
-This version 5.4.14 preview uses synthetic signals, not a live playback measurement.
+This version 5.5.0 preview uses synthetic signals, not a live playback measurement.
 
 Normalizes loud scenes for more comfortable listening. Set an output ceiling, then adjust compression sensitivity to reduce the difference between quiet dialogue and loud effects.
 
@@ -31,3 +31,11 @@ The controller is built with C# and Windows Forms; its audio component is C++. T
 Version 5.4.13 fixes meter connection status while muted: connected outputs retain MUTED even when audio blocks stop arriving, while readings clear to the floor.
 
 Version 5.4.14 improves action contrast, enlarges Normalize, unifies application/installer/window icons and delivers the shareable package as a single setup EXE. Existing audio settings are preserved.
+
+## New in 5.5.0
+
+Choose a simple tone panel or a ten-band vertical EQ in Settings > Audio: 31, 63, 125, 250, 500 Hz, 1, 2, 4, 8 and 16 kHz. Each band supports +/-18 dB, and the two views keep their values. A collapsible oscilloscope below the spectrum displays the actual waveform using the same capture source.
+
+The Volume control supports a small preamp boost up to 125% before the limiter while Normalize is ON. L/R balance now sits beside it on the left and snaps to the center. Rounded Normalize ON/OFF controls, silent Help, clear Saved feedback, a single engine chooser, classic option checkboxes and a populated Diagnostics page improve everyday use.
+
+The 5.5.0 candidate has passed isolated native, controller and package tests. Activating an updated system component on an existing machine requires Windows Audio to reload it; local live activation verification is pending approval.
