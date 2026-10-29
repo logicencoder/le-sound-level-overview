@@ -91,3 +91,12 @@ The dashboard uses the available window width. Additional height goes to an expa
 
 ![Responsive dashboard — synthetic preview](assets/dashboard-5.7.3.png)
 ![Layout settings — isolated fixture](assets/layout-5.7.3.png)
+
+
+## New in 5.7.4
+
+Larger frequency labels and EQ gain values are the default. Settings > Text size adjusts spectrum labels, equalizer labels and supporting text independently. Spectrum keeps room for its larger labels without overlap. Panel order, disclosure state and audio settings are retained.
+
+Preamp gain is visible in diagnostics and above 100% in the status line. At 125%, the boost is approximately 1.94 dB before compression and the limiter; Output level remains the ceiling.
+
+![Readable labels — synthetic preview](assets/readability-5.7.4.png)
