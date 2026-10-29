@@ -53,3 +53,7 @@ Output level and compression now sit side by side. Reverse their order in Settin
 The exact native module passed 417 isolated APO scenarios and was confirmed loaded on the existing host. A silent zero-only stream confirmed fresh fifteen-band processing telemetry after the approved Windows Audio reload. Saved audio values and mute restrictions were preserved. This update does not claim new clean-machine or protected-media certification.
 
 ![Synthetic fifteen-band dashboard preview](assets/dashboard-5.6.png)
+
+## New in 5.6.1
+
+Adjust Wave intensity directly with the slider above the waveform: 30–3000%, without changing audio volume. Its percentage is visible and saved automatically. Double-click the track or press Home to return to 100%. The same value is available in Settings > Spectrum. This was verified on the installed application during real playback, including the larger live waveform and persisted intensity; the native audio module is unchanged.
