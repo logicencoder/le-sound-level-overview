@@ -45,3 +45,11 @@ Version 5.5.0 passed 326 native processing scenarios plus controller, UI and sta
 The oscilloscope now uses a compact filled live waveform strip inspired by LE Karaoke Studio AFX, with the application's green theme. Adjust its display sensitivity from 30% to 300% in Settings > Spectrum; audio volume is unaffected. The full current sample window replaces the former triggered, gridded view. The panel retains its collapse arrow and shares capture with the spectrum.
 
 ![Synthetic waveform strip preview](assets/waveform-strip.png)
+
+## New in 5.6.0
+
+Output level and compression now sit side by side. Reverse their order in Settings > Application > Compression on the left. EQ has a separate full-width row and expands to fifteen bands while preserving the original frequency gains. The waveform uses the supplied AFX-style cyan filled trace on a near-black background with an inspection cursor; it does not seek playback. Existing tone controls and display sensitivity remain available.
+
+The exact native module passed 417 isolated APO scenarios and was confirmed loaded on the existing host. A silent zero-only stream confirmed fresh fifteen-band processing telemetry after the approved Windows Audio reload. Saved audio values and mute restrictions were preserved. This update does not claim new clean-machine or protected-media certification.
+
+![Synthetic fifteen-band dashboard preview](assets/dashboard-5.6.png)
