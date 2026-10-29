@@ -39,3 +39,9 @@ Choose a simple tone panel or a ten-band vertical EQ in Settings > Audio: 31, 63
 The Volume control supports a small preamp boost up to 125% before the limiter while Normalize is ON. L/R balance now sits beside it on the left and snaps to the center. Rounded Normalize ON/OFF controls, silent Help, clear Saved feedback, a single engine chooser, classic option checkboxes and a populated Diagnostics page improve everyday use.
 
 Version 5.5.0 passed 326 native processing scenarios plus controller, UI and standalone installer checks. It was also activated on the existing host: the exact native module was confirmed loaded by Windows Audio and a zero-only playback probe confirmed fresh processing telemetry. The installer contains all application payloads in one file.
+
+## New in 5.5.1
+
+The oscilloscope now uses a compact filled live waveform strip inspired by LE Karaoke Studio AFX, with the application's green theme. Adjust its display sensitivity from 30% to 300% in Settings > Spectrum; audio volume is unaffected. The full current sample window replaces the former triggered, gridded view. The panel retains its collapse arrow and shares capture with the spectrum.
+
+![Synthetic waveform strip preview](assets/waveform-strip.png)
