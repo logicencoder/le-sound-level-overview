@@ -76,3 +76,9 @@ Settings > Audio includes Restart audio, with administrator confirmation only wh
 The waveform cursor is removed and its intensity slider sits underneath, using the same palette-aware gradient as other controls. Volume marks 100% before its extra preamp range; EQ tracks are thicker. Output level and Compression sensitivity share aligned titles, middle values and lower sliders. Soft/Balanced/NMS are hidden by default and can be enabled in Settings > Application > Show compression presets. Saved panel order, audio values and display intensity are preserved.
 
 ![Consolidated dashboard — synthetic preview](assets/dashboard-5.7.1.png)
+
+## New in 5.7.2
+
+Compression percentage/ratio and Reduction share one compact row. EQ tracks are thicker by default; choose 4–16 px in Settings > Audio > EQ track thickness. The 100% Volume tick extends above and below the thumb at exactly 100%, making the extra preamp range easier to identify. Existing audio values and panel preferences are preserved.
+
+![Compact tuning row — synthetic preview](assets/dashboard-5.7.2.png)
